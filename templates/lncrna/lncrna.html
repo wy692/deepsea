@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+	ncRNA of Mariana hadal organism
+{% endblock %}
+{% block header_extends %}
+	<link rel = "stylesheet" href = "{% static 'ncrna.css' %}">
+{% endblock %}
+{% block nav_lncRNA_active %}
+	active
+{% endblock %}
+{% block content %}
+	<table class="table">
+	    <thead>
+	    <tr>
+	        <th>Name</th>
+	        <th>Species Name</th>
+	        <th>Chrosome</th>
+	        <th>Length</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    	{% for lncrna in lncrnas %}
+			    <tr>
+			        <td><a href="#">{{ lncrna.name }}<a></td>
+			        <td>{{ lncrna.spename }}</td>
+			        <td>{{ lncrna.chrosome }}</td>
+			        <td>{{ lncrna.length }}</td>
+			    </tr>
+		    {% endfor %}
+	    </tbody>
+	</table>
+	
+{% endblock %}

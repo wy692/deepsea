@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+	ncRNA of Mariana hadal organism
+{% endblock %}
+{% block header_extends %}
+	<link rel = "stylesheet" href = "{% static 'species.css' %}">
+	<link href="{% static 'plant.css' %}" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="/static/dtree.js"></script>
+{% endblock %}
+{% block nav_species_active %}
+	active
+{% endblock %}
+{% block content %}
+	<div>
+		<script type="text/javascript">
+			<!--
+
+				d = new dTree('d');
+				d.add(0, -1,'Taxonomic Group (36 species)' );
+
+
+				d.add(1, 0,'Bacteria');
+				d.add(2, 0,'Archaea');
+				d.add(3, 0,'Vertebrata');
+				d.add(4,0,'Arthropoda');
+				d.add(5,0,'Cnidaria');
+				d.add(6,0,'Mollusca');
+				
+				d.add(11,1,'Proteobacteria','#');
+				d.add(12,1,'Thaumarchaeota','#');
+				d.add(13,1,'Actinobacteria','#');
+				d.add(14,1,'Chloroflexi','#');
+				d.add(15,1,'Deferribacteres','#');
+				d.add(16,1,'Cyanobacteria','#');
+
+				d.add(21,2,'gamma proteobacterium','#');
+				d.add(22,2,'Marine Group II','#');
+				d.add(23,2,'uncultured marine group I crenarchaeote','#');
+
+				d.add(31,3,'snail fish(G)','#');
+				d.add(32,3,'Aldrovandia affinis(G)','#');
+
+				d.add(41,4,'Hirondellea gigas(G)','#');
+				d.add(42,4,'Rimicaris sp.(G)','#');
+
+				d.add(51,5,'Dendrophyllia sp.(G)','#');
+				d.add(52,5,'Eguchipsammia fistula(G)','#');
+				d.add(53,5,'Rhizotrochus typus(G)','#');
+				d.add(54,5,' Acropora digitifera(G)','#');
+
+				d.add(61,6,'Bathymodiolus platifrons(G)','#');
+				d.add(62,6,'Bathymodiolus manusensis(G)','#');
+
+				d.add(1201,12,'Marine Group I','#');
+
+				d.add(1101,11,'Alteromonas','#');
+				d.add(1102,11,'Alcanivorax','#');
+				d.add(1103,11,'Halomonas','#');
+				d.add(1104,11,'Erythrobacteraceae','#');
+				d.add(1105,11,'Pseudoalteromonas sp','#');
+				d.add(1106,11,'Sulfitobacter sp','#');
+				d.add(1107,11,'Acinetobacter','#');
+				d.add(1108,11,'Methylophaga alcalica','#');
+				d.add(1109,11,'Marinovum algicola','#');
+				d.add(1110,11,'uncultured gamma proteobacterium','#');	
+				d.add(1112,11,'Pseudomonas sp. E505-11','#');
+				d.add(1113,11,'SHA-109','#');
+				d.add(1114,11,'bacterium N159G.619','#');
+				d.add(1115,11,'S25-593','#');
+				d.add(1116,11,'Psychrobacter sp','#');
+				d.add(1117,11,'GR-WP33-58','#');
+				
+				d.add(1301,13,'Corynebacteriales','#');
+				d.add(1302,13,'Sva0996 marine group','#');
+				d.add(1302,13,'Sva0996 marine group','#');
+
+				d.add(1401,14,'SAR202 clade','#');
+
+				d.add(1501,15,'SAR406 clade(Marine group A)','#');
+				d.add(1502,15,'SAR406 cluster bacterium HF4000_22B16','#');
+
+				d.add(1601,16,'Microcoleus chthonoplastes PCC 7420','#');
+				d.add(1602,16,'SHA-109','#');
+
+
+
+				document.write(d);
+
+		//-->
+		</script>
+		
+	
+
+
+	
+	</div>
+	
+
+
+
+	
+{% endblock %}

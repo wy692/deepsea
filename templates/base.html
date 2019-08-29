@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel = "stylesheet" href = "{% static 'bootstrap-3.3.7/css/bootstrap.min.css' %}">
+	<link rel = "stylesheet" href = "{% static 'basee.css' %}">
+	<link rel = "stylesheet" href = "{% static 'justified-nav.css' %}">
+	<script type = "text/javascript" src= "{% static 'jquery-1.12.4.min.js'%}"></script>
+	<script type = "text/javascript" src = "{% static 'bootstrap-3.3.7/js/bootstrap.min.js' %}"></script>
+	<script type = "text/javascript" src= "{% static 'collapse.js'%}"></script>
+	<title>{% block title %}{% endblock %}</title>
+	{% block header_extends %}{% endblock %}
+
+</head>
+<body>
+	<div class="container">
+	 	<div class="masthead">
+        	<h3 class="text-muted">ncRNA of deep sea creatures</h3>
+	        <nav>
+	        	<ul class="nav nav-justified">
+		            <li class="{% block nav_home_active %}{% endblock %}">
+						<a href = "{% url 'home' %}">home</a>
+					</li>
+					<li class="{% block nav_species_active %}{% endblock %}">
+						<a href="{% url 'species' %}">species </a>
+					</li>
+					<li class="{% block nav_miRNA_active %}{% endblock %}">
+						<a href="{% url 'microrna' %}">miRNA</a>
+					</li>
+					<li class="{% block nav_lncRNA_active %}{% endblock %}">
+						<a href="{% url 'lncrna' %}">lncRNA</a>
+					</li>
+					<li class="{% block nav_circRNA_active %}{% endblock %}">
+						<a href="{% url 'circrna' %}">circRNA</a>
+					</li>
+	            </ul>
+        	</nav>
+        </div>
+        {% block content %}{% endblock %}
+	</div>
+	
+		         <!--
+		        <div class="inner cover">
+		            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+		        </div>
+				-->
+	
+	
+</body>
+</html>

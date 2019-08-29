@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+	ncRNA of Mariana hadal organism
+{% endblock %}
+{% block content %}
+	{% for spe in species %}
+		<h3>{{spe.title}}</h3>
+		<p>{{ spe.description }}</p>
+	{% endfor %}
+{% endblock %}

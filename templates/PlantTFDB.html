@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="plant.css" type="text/css" rel="stylesheet" />
+<link rel="icon" href="images/PlantTFDB_small_logo.jpg" type="image/x-icon" />
+<link rel="SHORTCUT ICON" href="images/PlantTFDB_small_logo.jpg" type="image/x-icon" />
+<meta name="keywords" content="planttfdb, plant transcription factor database, Arabidopsis transcription factor database, rice transcription factor database, polar transcription facctor database, database of Arabidopsis transcription factors, database of rice transcription factors, database of polar transcription facctors, plant transcription factor, plant, transcription factor, database, transcript regulation, transcription factor evolution, plntfdb, TF, function, family, ortholog group, ortholog, phylogenetic tree, Arabidopsis lyrata, Arabidopsis thaliana, Brachypodium distachyon, Chlorella sp. NC66A, Carica papaya, Chlamydomonas reinhardtii, Cucumis sativus, Coccomyxa sp. C-169, Glycine max, Lotus japonicus, Manihot esculenta, Mimulus guttatus, Micromonas pusilla CCMP1545, Micromonas sp. RCC299, Medicago truncatula, Ostreococcus lucimarinus CCE9901, Ostreococcus sp. RCC809, Oryza sativa subsp. indica, Oryza sativa subsp. japonica, Ostreococcus tauri, Physcomitrella patens subsp. patens, Prunus persica, Populus trichocarpa, Ricinus communis, Sorghum bicolor, Selaginella moellendorffii, Volvox carteri, Vitis vinifera, Zea mays, Picea glauca, Picea sitchensis, Pinus taeda, Arachis hypogaea, Artemisia annua, Brassica napus, Brassica rapa, Citrus sinensis, Gossypium hirsutum, Helianthus annuus, Malus domestica, Nicotiana tabacum, Raphanus sativus, Solanum lycopersicum, Solanum tuberosum, Theobroma cacao, Vigna unguiculata, Hordeum vulgare, Saccharum officinarum, Triticum aestivum, Aegilops tauschii, Amborella trichopoda, Aquilegia coerulea, Azadirachta indica, Bathycoccus prasinos, Cajanus cajan, Cannabis sativa, Capsella rubella, Cicer arietinum, Citrullus lanatus, Citrus clementina, Cucumis melo, Eucalyptus grandis, Fragaria vesca, Gossypium raimondii, Jatropha curcas, Linum usitatissimum, Musa acuminata, Nelumbo nucifera, Oryza barthii, Oryza brachyantha, Oryza glaberrima, Oryza punctata, Phoenix dactylifera, Phyllostachys heterocycla, Picea abies, Pyrus bretschneideri, Setaria italica, Thellungiella halophila, Thellungiella parvula, Triticum urartu, Utricularia gibba, Brassica oleracea, Capsicum annuum, Lactuca sativa" />
+<meta name="author" content="center for bioinformatics" />
+<meta name="description" content="Plant transcription factor database, a portal for the functional and evolutionary study of plant transcription factors" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PlantTFDB - Plant Transcription Factor Database @ CBI, PKU</title>
+</head>
+<body id='body_one'>
+<div id='main_body'><table width='100%'>
+	<tr>
+		<td style='width: 200px' rowspan='2'><a href='/'><img
+			src="images/title_pic.jpg" style='border: none; width: 280px' alt="PlantTFDB" /></a></td>
+		<td style='vertical-align: bottom; padding-bottom: 5px;'>
+		<div style='text-align: center; font-size: 2.3em;'>Plant Transcription
+		Factor Database</div>
+		<div style='text-align: right; font-size: 1.5em'>v3.0</div>
+		<span class='float_left'><a href='http://www.cbi.pku.edu.cn' target="_blank">Center for
+		Bioinformatics</a>, <a href='http://english.pku.edu.cn' target="_blank">Peking University</a>,
+		<a href='#'>China</a></span> 
+		<span class='float_right'>Previous versions:<a
+			href='http://planttfdb_v1.cbi.pku.edu.cn:9010/' target="_blank">v1.0</a>
+		<a
+                        href='http://planttfdb_v2.cbi.pku.edu.cn/' target="_blank">v2.0</a></span>
+		</td>
+	</tr>
+</table>
+<table class='menu'>
+	<tr>
+		<td style='width: 760px'><a href='/index.php'>Home</a>&nbsp;&nbsp;<a href='/blast.php'>Blast</a>&nbsp;&nbsp;<a href='/search.php'>Search</a>
+&nbsp;<a href='/download.php'>Download</a>&nbsp;&nbsp;<a href='/prediction.php'>Prediction</a>&nbsp;&nbsp;<a href='/help.php'>Help</a>&nbsp;&nbsp;<a href='/aboutus.php'>About</a>&nbsp;&nbsp;<a href='http://atrm.cbi.pku.edu.cn'>ATRM</a>&nbsp;&nbsp;<a href='/link.php'>Links</a>
+		</td>
+		<td></td>
+		<td style='width: 350px; text-align: right'><form method='post' action="quick_search_result.php" id='searchform'
+	style='display: inline'>
+<div style='text-align: right; padding-right: 0px'><input
+	id='input_qsearch' name='input_qsearch' size='10'
+	style='display: inline' /> <input name='submit_quick'
+	type='submit' value='Search' style='display: inline; width: 53px' />
+(e.g., <a
+	onclick='javascript: document.getElementById("input_qsearch").value="LFY"'>LFY</a>)
+</div>
+</form>
+</td>
+	</tr>
+</table>
+<div id='main_content'>
+<!-- Species Start -->
+<div><div style='color: red; display: inline'> News</div>:The new version <a href="http://planttfdb.cbi.pku.edu.cn" target="_blank">PlantTFDB v4.0</a> is online now. (2016-10-5)</div>
+<div><br/><div style='color: red; display: inline'> News</div>: A manually curated <a href='http://atrm.cbi.pku.edu.cn/' target='_blank'><i>Arabidopsis</i> transcriptional regulatory network (ATRM) </a> is online, which covers <div style='color: red; display: inline'>388</div> TFs from <div style='color: red; display: inline'>47</div> families. Moreover, the heterogeneity of developmental and stress response sub-networks and the wiring preference of novel TFs in transcriptional regulatory systems are unveiled, providing insights into the fate determination of novel TFs and their contribution to the evolution of transcriptional regulatory networks [<a href="https://mbe.oxfordjournals.org/content/32/7/1767.full" target="_blank">full text</a>].<hr/><br/></div>
+<div class='title_two'>Browse by Species</div>
+<div>
+<script type="text/javascript" src="dtree/dtree.js"></script>
+<div class="dtree">
+<div><a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a></div>
+	<script type="text/javascript">
+		<!--
+
+		d = new dTree('d');
+		d.add(0, -1,'Taxonomic Group (83 species) &nbsp;&nbsp;&nbsp;&nbsp;(G)-species with genome sequence');
+
+		d.add(1, 0,'Chlorophyta (10 species)');
+		d.add(2, 0,'Bryophyta (1 species)');
+		d.add(3, 0,'Lycopodiophyta (1 species)');
+		d.add(4, 0,'Coniferopsida (4 species)');
+		d.add(5, 0,'Basal Magnoliophyta (1 species)');
+		d.add(6, 0,'Monocot (17 species)');
+		d.add(7, 0,'Eudicot (49 species)');
+		
+		d.add(101,1,'Bathycoccus prasinos (G)','index.php?sp=Bpr');
+		d.add(102,1,'Chlamydomonas reinhardtii (G)','index.php?sp=Cre');
+		d.add(103,1,'Chlorella sp. NC64A (G)','index.php?sp=Cnc');
+		d.add(104,1,'Coccomyxa sp. C-169 (G)','index.php?sp=Cvu');
+		d.add(105,1,'Micromonas pusilla CCMP1545 (G)','index.php?sp=Mpu');
+		d.add(106,1,'Micromonas sp. RCC299 (G)','index.php?sp=Mrc');
+		d.add(107,1,'Ostreococcus lucimarinus CCE9901 (G)','index.php?sp=Olu');
+		d.add(108,1,'Ostreococcus sp. RCC809 (G)','index.php?sp=Orc');
+		d.add(109,1,'Ostreococcus tauri (G)','index.php?sp=Ota');
+		d.add(110,1,'Volvox carteri (G)','index.php?sp=Vca');
+		d.add(111,2,'Physcomitrella patens subsp. patens (G)','index.php?sp=Ppa');
+		d.add(112,3,'Selaginella moellendorffii (G)','index.php?sp=Smo');
+		d.add(113,4,'Picea abies (Norway spruce) (G)','index.php?sp=Pab');
+		d.add(114,4,'Picea glauca (white spruce)','index.php?sp=Pgl');
+		d.add(115,4,'Picea sitchensis (Sitka spruce)','index.php?sp=Psi');
+		d.add(116,4,'Pinus taeda (loblolly pine)','index.php?sp=Pta');
+		d.add(117,5,'Amborella trichopoda (G)','index.php?sp=Atr');
+		d.add(118,6,'Aegilops tauschii (Tausch\'s goatgrass) (G)','index.php?sp=Ata');
+		d.add(119,6,'Brachypodium distachyon (purple false brome) (G)','index.php?sp=Bdi');
+		d.add(120,6,'Hordeum vulgare (barley) (G)','index.php?sp=Hvu');
+		d.add(121,6,'Musa acuminata (dwarf banana) (G)','index.php?sp=Mac');
+		d.add(122,6,'Oryza barthii (African wild rice) (G)','index.php?sp=Oba');
+		d.add(123,6,'Oryza brachyantha (malo sina) (G)','index.php?sp=Obr');
+		d.add(124,6,'Oryza glaberrima (African rice) (G)','index.php?sp=Ogl');
+		d.add(125,6,'Oryza punctata (G)','index.php?sp=Opu');
+		d.add(126,6,'Oryza sativa subsp. indica (Indian rice) (G)','index.php?sp=Osi');
+		d.add(127,6,'Oryza sativa subsp. japonica (Japanese rice) (G)','index.php?sp=Osj');
+		d.add(129,6,'Phoenix dactylifera (date palm) (G)','index.php?sp=Pda');
+		d.add(130,6,'Phyllostachys heterocycla (moso bamboo) (G)','index.php?sp=Phe');
+		d.add(131,6,'Saccharum officinarum (sugarcane)','index.php?sp=Sof');
+		d.add(132,6,'Setaria italica (foxtail millet) (G)','index.php?sp=Sit');
+		d.add(133,6,'Sorghum bicolor (sorghum) (G)','index.php?sp=Sbi');
+		d.add(134,6,'Triticum aestivum (wheat)','index.php?sp=Tae');
+		d.add(135,6,'Triticum urartu (G)','index.php?sp=Tur');
+		d.add(136,6,'Zea mays (maize) (G)','index.php?sp=Zma');
+		d.add(137,7,'Aquilegia coerulea (columbine) (G)','index.php?sp=Aco');
+		d.add(11,7,'Asterids (9 species)');
+		d.add(12,7,'Fabids (20 species)');
+		d.add(13,7,'Malvids (17 species)');
+		d.add(171,7,'Nelumbo nucifera (sacred lotus) (G)','index.php?sp=Nnu');
+		d.add(186,7,'Vitis vinifera (wine grape) (G)','index.php?sp=Vvi');
+		
+		d.add(141,11,'Artemisia annua (sweet wormwood)','index.php?sp=Aan');
+		d.add(149,11,'Capsicum annuum (chilli pepper)','index.php?sp=Can');
+		d.add(162,11,'Helianthus annuus (sunflower)','index.php?sp=Han');
+		d.add(164,11,'Lactuca sativa (garden lettuce)','index.php?sp=Lsa');
+		d.add(170,11,'Mimulus guttatus (spotted monkey flower) (G)','index.php?sp=Mgu');
+		d.add(172,11,'Nicotiana tabacum (tobacco)','index.php?sp=Nta');
+		d.add(179,11,'Solanum lycopersicum (tomato) (G)','index.php?sp=Sly');
+		d.add(180,11,'Solanum tuberosum (potato) (G)','index.php?sp=Stu');
+		d.add(184,11,'Utricularia gibba (humped bladderwort) (G)','index.php?sp=Ugi');	
+			
+				
+		d.add(140,12,'Arachis hypogaea (peanut)','index.php?sp=Ahy');
+		d.add(146,12,'Cajanus cajan (pigeon pea) (G)','index.php?sp=Cca');
+		d.add(147,12,'Cannabis sativa (hemp) (G)','index.php?sp=Csa');
+		d.add(151,12,'Cicer arietinum (chickpea) (G)','index.php?sp=Car');
+		d.add(152,12,'Citrullus lanatus (watermelon) (G)','index.php?sp=Cla');
+		d.add(155,12,'Cucumis melo (muskmelon) (G)','index.php?sp=Cme');
+		d.add(156,12,'Cucumis sativus (cucumber) (G)','index.php?sp=Csg');
+		d.add(158,12,'Fragaria vesca (wild strawberry) (G)','index.php?sp=Fve');
+		d.add(159,12,'Glycine max (soybean) (G)','index.php?sp=Gma');
+		d.add(163,12,'Jatropha curcas (G)','index.php?sp=Jcu');
+		d.add(165,12,'Linum usitatissimum (flax) (G)','index.php?sp=Lus');
+		d.add(166,12,'Lotus japonicus (G)','index.php?sp=Lja');
+		d.add(167,12,'Malus domestica (apple) (G)','index.php?sp=Mdo');
+		d.add(168,12,'Manihot esculenta (cassava) (G)','index.php?sp=Mes');
+		d.add(169,12,'Medicago truncatula (barrel medic) (G)','index.php?sp=Mtr');
+		d.add(174,12,'Populus trichocarpa (western balsam poplar) (G)','index.php?sp=Pth');
+		d.add(175,12,'Prunus persica (peach) (G)','index.php?sp=Ppe');
+		d.add(176,12,'Pyrus bretschneideri (Chinese white pear) (G)','index.php?sp=Pbr');
+		d.add(178,12,'Ricinus communis (castor bean) (G)','index.php?sp=Rco');
+		d.add(185,12,'Vigna unguiculata (cowpea)','index.php?sp=Vun');
+		
+		d.add(138,13,'Arabidopsis lyrata (lyrate rockcress) (G)','index.php?sp=Aly');
+		d.add(139,13,'Arabidopsis thaliana (thale cress) (G)','index.php?sp=Ath');
+		d.add(142,13,'Azadirachta indica (neem) (G)','index.php?sp=Ain');
+		d.add(143,13,'Brassica napus (rape)','index.php?sp=Bna');
+		d.add(144,13,'Brassica oleracea (wild cabbage)','index.php?sp=Bol');
+		d.add(145,13,'Brassica rapa (field mustard) (G)','index.php?sp=Bra');
+		d.add(148,13,'Capsella rubella (G)','index.php?sp=Cru');
+		d.add(150,13,'Carica papaya (papaya) (G)','index.php?sp=Cpa');
+		d.add(153,13,'Citrus clementina (clementine) (G)','index.php?sp=Ccl');
+		d.add(154,13,'Citrus sinensis (sweet orange) (G)','index.php?sp=Csi');
+		d.add(157,13,'Eucalyptus grandis (rose gum) (G)','index.php?sp=Egr');
+		d.add(160,13,'Gossypium hirsutum (upland cotton)','index.php?sp=Ghi');
+		d.add(161,13,'Gossypium raimondii (cotton) (G)','index.php?sp=Gra');
+		d.add(177,13,'Raphanus sativus (radish)','index.php?sp=Rsa');
+		d.add(181,13,'Thellungiella halophila (G)','index.php?sp=Tha');
+		d.add(182,13,'Thellungiella parvula (G)','index.php?sp=Tpa');
+		d.add(183,13,'Theobroma cacao (cocoa) (G)','index.php?sp=Tca');
+
+		document.write(d);
+
+		//-->
+	</script>
+
+</div>
+</div>
+<!-- Species End -->
+<!-- Family Start -->
+<div class='title_two'>Browse by Family</div>
+<table class='tf_info'>
+<tr class="alt">
+<td style='width: 16%'><a href='family.php?fam=AP2'>AP2</a>&nbsp;(1776)</td>
+<td style='width: 16%'><a href='family.php?fam=ARF'>ARF</a>&nbsp;(1914)</td>
+<td style='width: 16%'><a href='family.php?fam=ARR-B'>ARR-B</a>&nbsp;(914)</td>
+<td style='width: 16%'><a href='family.php?fam=B3'>B3</a>&nbsp;(4051)</td>
+<td style='width: 16%'><a href='family.php?fam=BBR-BPC'>BBR-BPC</a>&nbsp;(492)</td>
+<td style='width: 16%'><a href='family.php?fam=BES1'>BES1</a>&nbsp;(651)</td>
+</tr>
+<tr>
+<td style='width: 16%'><a href='family.php?fam=C2H2'>C2H2</a>&nbsp;(7336)</td>
+<td style='width: 16%'><a href='family.php?fam=C3H'>C3H</a>&nbsp;(4019)</td>
+<td style='width: 16%'><a href='family.php?fam=CAMTA'>CAMTA</a>&nbsp;(518)</td>
+<td style='width: 16%'><a href='family.php?fam=CO-like'>CO-like</a>&nbsp;(854)</td>
+<td style='width: 16%'><a href='family.php?fam=CPP'>CPP</a>&nbsp;(594)</td>
+<td style='width: 16%'><a href='family.php?fam=DBB'>DBB</a>&nbsp;(764)</td>
+</tr>
+<tr class="alt">
+<td style='width: 16%'><a href='family.php?fam=Dof'>Dof</a>&nbsp;(2312)</td>
+<td style='width: 16%'><a href='family.php?fam=E2F/DP'>E2F/DP</a>&nbsp;(692)</td>
+<td style='width: 16%'><a href='family.php?fam=EIL'>EIL</a>&nbsp;(531)</td>
+<td style='width: 16%'><a href='family.php?fam=ERF'>ERF</a>&nbsp;(8688)</td>
+<td style='width: 16%'><a href='family.php?fam=FAR1'>FAR1</a>&nbsp;(2542)</td>
+<td style='width: 16%'><a href='family.php?fam=G2-like'>G2-like</a>&nbsp;(3935)</td>
+</tr>
+<tr>
+<td style='width: 16%'><a href='family.php?fam=GATA'>GATA</a>&nbsp;(2229)</td>
+<td style='width: 16%'><a href='family.php?fam=GRAS'>GRAS</a>&nbsp;(3915)</td>
+<td style='width: 16%'><a href='family.php?fam=GRF'>GRF</a>&nbsp;(752)</td>
+<td style='width: 16%'><a href='family.php?fam=GeBP'>GeBP</a>&nbsp;(683)</td>
+<td style='width: 16%'><a href='family.php?fam=HB-PHD'>HB-PHD</a>&nbsp;(160)</td>
+<td style='width: 16%'><a href='family.php?fam=HB-other'>HB-other</a>&nbsp;(987)</td>
+</tr>
+<tr class="alt">
+<td style='width: 16%'><a href='family.php?fam=HD-ZIP'>HD-ZIP</a>&nbsp;(3436)</td>
+<td style='width: 16%'><a href='family.php?fam=HRT-like'>HRT-like</a>&nbsp;(95)</td>
+<td style='width: 16%'><a href='family.php?fam=HSF'>HSF</a>&nbsp;(1833)</td>
+<td style='width: 16%'><a href='family.php?fam=LBD'>LBD</a>&nbsp;(2779)</td>
+<td style='width: 16%'><a href='family.php?fam=LFY'>LFY</a>&nbsp;(100)</td>
+<td style='width: 16%'><a href='family.php?fam=LSD'>LSD</a>&nbsp;(402)</td>
+</tr>
+<tr>
+<td style='width: 16%'><a href='family.php?fam=M-type'>M-type</a>&nbsp;(2978)</td>
+<td style='width: 16%'><a href='family.php?fam=MIKC'>MIKC</a>&nbsp;(2864)</td>
+<td style='width: 16%'><a href='family.php?fam=MYB'>MYB</a>&nbsp;(8746)</td>
+<td style='width: 16%'><a href='family.php?fam=MYB_related'>MYB_related</a>&nbsp;(6410)</td>
+<td style='width: 16%'><a href='family.php?fam=NAC'>NAC</a>&nbsp;(8133)</td>
+<td style='width: 16%'><a href='family.php?fam=NF-X1'>NF-X1</a>&nbsp;(176)</td>
+</tr>
+<tr class="alt">
+<td style='width: 16%'><a href='family.php?fam=NF-YA'>NF-YA</a>&nbsp;(943)</td>
+<td style='width: 16%'><a href='family.php?fam=NF-YB'>NF-YB</a>&nbsp;(1334)</td>
+<td style='width: 16%'><a href='family.php?fam=NF-YC'>NF-YC</a>&nbsp;(1018)</td>
+<td style='width: 16%'><a href='family.php?fam=NZZ/SPL'>NZZ/SPL</a>&nbsp;(45)</td>
+<td style='width: 16%'><a href='family.php?fam=Nin-like'>Nin-like</a>&nbsp;(1002)</td>
+<td style='width: 16%'><a href='family.php?fam=RAV'>RAV</a>&nbsp;(289)</td>
+</tr>
+<tr>
+<td style='width: 16%'><a href='family.php?fam=S1Fa-like'>S1Fa-like</a>&nbsp;(158)</td>
+<td style='width: 16%'><a href='family.php?fam=SAP'>SAP</a>&nbsp;(63)</td>
+<td style='width: 16%'><a href='family.php?fam=SBP'>SBP</a>&nbsp;(1675)</td>
+<td style='width: 16%'><a href='family.php?fam=SRS'>SRS</a>&nbsp;(506)</td>
+<td style='width: 16%'><a href='family.php?fam=STAT'>STAT</a>&nbsp;(84)</td>
+<td style='width: 16%'><a href='family.php?fam=TALE'>TALE</a>&nbsp;(1797)</td>
+</tr>
+<tr class="alt">
+<td style='width: 16%'><a href='family.php?fam=TCP'>TCP</a>&nbsp;(1704)</td>
+<td style='width: 16%'><a href='family.php?fam=Trihelix'>Trihelix</a>&nbsp;(2599)</td>
+<td style='width: 16%'><a href='family.php?fam=VOZ'>VOZ</a>&nbsp;(227)</td>
+<td style='width: 16%'><a href='family.php?fam=WOX'>WOX</a>&nbsp;(937)</td>
+<td style='width: 16%'><a href='family.php?fam=WRKY'>WRKY</a>&nbsp;(5936)</td>
+<td style='width: 16%'><a href='family.php?fam=Whirly'>Whirly</a>&nbsp;(233)</td>
+</tr>
+<tr>
+<td style='width: 16%'><a href='family.php?fam=YABBY'>YABBY</a>&nbsp;(725)</td>
+<td style='width: 16%'><a href='family.php?fam=ZF-HD'>ZF-HD</a>&nbsp;(1066)</td>
+<td style='width: 16%'><a href='family.php?fam=bHLH'>bHLH</a>&nbsp;(11428)</td>
+<td style='width: 16%'><a href='family.php?fam=bZIP'>bZIP</a>&nbsp;(6258)</td>
+<td style="width: 25"></td><td style="width: 25"></td></tr>
+</table>
+</div>
+<!-- Family End -->
+<!-- Reference start-->
+<div class='column_content'>
+<div class='ref_title'>How to Cite:</div>
+<div class='ref_content'>Jin JP, Zhang H, Kong L, Gao G and Luo JC. (2014). 
+        <a href='http://nar.oxfordjournals.org/content/42/D1/D1182.abstract.html?etoc' target="_blank">PlantTFDB 3.0: a portal for the functional and evolutionary study of plant transcription factors</a>. <i>Nucleic Acids Research</i>, 42(D1):D1182-D1187.</div>
+<div class='ref_content'>Jin JP, He K, Tang X, Li Z, Lv L, Zhao Y, Luo JC, Gao G. (2015).
+        <a href='http://mbe.oxfordjournals.org/content/32/7/1767.full' target="_blank">An <i>Arabidopsis</i> transcriptional regulatory map reveals distinct functional and evolutionary features of novel transcription factors</a>. <i>Molecular Biology and Evolution</i>, 32(7):1767-1773.</div>
+ 
+</div>
+<div id='footer'>
+<hr />
+<table>
+	<tr>
+		<td style='width: 600px; padding-left: 10px'>&copy;2010-, <a href='http://www.cbi.pku.edu.cn/' target="_blank">Center
+		for Bioinformatics</a>, <a href='http://english.pku.edu.cn/' target="_blank">Peking University</a><br />
+		Last Modified: 2013-8-23<br />
+		Questions or Comments, please contact <br />
+		<img style='height: 25px; width: 200px' src="images/email.jpg" alt='email' /></td>
+		<td style='text-align: right'>
+		<div class='linkout'>
+		<div style='font-size: 0.9em; line-height: 200%;'>Supported By</div>
+		<a href="http://www.973.gov.cn/" target="_blank"><img src="images/973.jpg"
+			alt="973 China" style='height: 60px; border:none;' /></a> <a href="http://www.863.gov.cn" target="_blank"><img
+			src="images/863.png" alt="863 program" style='height: 60px; border:none;' /></a> <a
+			href="http://www.nsfc.gov.cn" target="_blank"><img src="images/nsfc.jpg" alt="NSFC"
+			style='height: 60px; border:none;' /></a> <a href="http://www.moe.gov.cn" target="_blank"><img
+			src="images/ChinaGrid2.png" alt="ChinaGrid Platform" style='height: 60px; border:none;' /></a>
+		</div>
+		</td>
+	</tr>
+</table>
+</div>
+</div>
+</body>
+</html>
